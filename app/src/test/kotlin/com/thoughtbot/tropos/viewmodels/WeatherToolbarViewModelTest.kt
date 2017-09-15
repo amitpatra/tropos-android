@@ -24,7 +24,6 @@ import kotlin.test.assertEquals
 class WeatherToolbarViewModelTest() {
 
   lateinit var context: Context
-
   val mockCondition: Condition = MockCondition.getInstance()
 
   @Before

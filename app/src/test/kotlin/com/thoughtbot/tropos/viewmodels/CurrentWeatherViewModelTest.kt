@@ -30,7 +30,6 @@ class CurrentWeatherViewModelTest() {
 
   lateinit var context: Context
   val preferences = mock<Preferences>()
-
   val mockCondition: Condition = MockCondition.getInstance()
 
   @Before
