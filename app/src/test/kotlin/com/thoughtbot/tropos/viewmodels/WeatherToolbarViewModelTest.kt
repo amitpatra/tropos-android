@@ -15,7 +15,7 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricGradleTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
-import java.util.Date
+import java.util.*
 import kotlin.test.assertEquals
 
 @RunWith(RobolectricGradleTestRunner::class)
@@ -25,8 +25,9 @@ class WeatherToolbarViewModelTest() {
   lateinit var context: Context
 
   val mockCondition: Condition = {
-    val timeStamp = 1484180189 * 1000L // equivalent to Wed Jan 11 16:16:29 PST 2017
-    val date = Date(timeStamp)
+    val cal = Calendar.getInstance()
+    cal.set(2017, 1, 11, 16, 16, 29)
+    val date = cal.getTime()
     val summary = "Mostly Cloudy"
     val location = Location("")
     location.longitude = -122.4375671
